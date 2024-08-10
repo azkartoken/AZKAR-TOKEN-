@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZKAR TOKEN</title>
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- الصفحة الأولى -->
+    <div id="page1" class="page active">
+        <header>
+            <div class="user-info">
+                <p>Welcome, <span id="userName">Guest</span></p>
+                <p id="cryptoPrices">Loading...</p>
+            </div>
+            <h1>AZKAR TOKEN</h1>
+        </header>
+
+        <section>
+            <h2>Register</h2>
+            <input type="email" id="newEmail" placeholder="Email">
+            <input type="text" id="newUsername" placeholder="Username">
+            <input type="password" id="newPassword" placeholder="Password">
+            <button onclick="register()">Register</button>
+        </section>
+
+        <section>
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </section>
+
+        <p id="status"></p>
+    </div>
+
+    <!-- الصفحة الثانية -->
+    <div id="page2" class="page">
+        <header>
+            <div class="user-info">
+                <img id="profilePic" src="images/default_profile.png" alt="Profile Picture">
+                <p id="walletAddress">Wallet Address: <span id="wallet"></span></p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Mine AZKAR</h2>
+            <button onclick="mineBlock()">Mine</button>
+            <p id="minerStatus"></p>
+        </section>
+
+        <section>
+            <h2>Wallet</h2>
+            <button onclick="viewWallet()">View Wallet</button>
+        </section>
+
+        <footer>
+            <p>AZKAR TOKEN © 2024</p>
+        </footer>
+    </div>
+
+    <!-- ربط ملف JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
